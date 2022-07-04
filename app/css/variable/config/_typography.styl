@@ -1,0 +1,139 @@
+//  ============================ Typography ============================
+
+//webfont('RUB', 'rouble-webfont', 'normal')
+//Add fotn rub write .rub a - (a,b,c,d - change type font)
+
+//font(name,file,size)
+font('Neo Sans Pro','NeoSansPro-Light',300)
+font('Neo Sans Pro','NeoSansPro-Regular',400)
+font('Neo Sans Pro','NeoSansPro-Medium',500)
+font('Neo Sans Pro','NeoSansPro-Bold',700)
+
+$v-font =  "Neo Sans Pro", sans-serif
+
+typeSize(fontSm,font)
+	+below(768px)
+		font-size font px
+	font-size fontSm px
+
+/*
+font-size 12px
+@extend .type--sm
+
+font-size 14px
+@extend .type--main
+
+font-size 16px
+@extend .type--md
+
+font-size 18px
+@extend .type--mdx
+
+font-size 24px
+@extend .type--lg
+
+font-size 36px
+@extend .type--lgx
+
+font-size 48px
+@extend .type--xl
+*/
+
+.type--xs
+	typeSize(10,10)
+
+.type--sm
+	typeSize(12,12)
+
+.type--main
+	typeSize(16,12)
+
+.type--md
+	typeSize(16,14)
+
+.type--mdx
+	typeSize(18,16)
+
+.type--lg
+	typeSize(28,20)
+
+.type--lgx
+	typeSize(36,24)
+
+.type--xl
+	typeSize(48,32)
+
+.type--bold
+	font-weight bold
+
+h1
+	@extend .type--xl
+	font-weight: 500
+h2
+	@extend .type--lgx
+	font-weight: 500
+h3
+	@extend .type--lg
+	font-weight: 500
+	margin: 10px 0
+h4
+	@extend .type--mdx
+	font-weight: 500
+	margin: 10px 0
+h5
+	@extend .type--md
+	font-weight: 500
+
+
+a
+	color $link-color
+	text-decoration: none
+	&:hover
+		color darken($link-color,20)
+	&:visiter
+		color darken($link-color,30)
+
+p
+	@extend .type--main
+
+.link--mark
+	color $mark
+	&:hover
+		color darken($mark,20)
+	&:visiter
+		color darken($mark,30)
+
+.link--main
+	color $link-color
+	hover-underline($link-color)
+	&:hover
+		color darken($link-color,20)
+	&:visiter
+		color darken($link-color,30)
+
+.link--text
+	color $link-color
+	text-decoration underline
+	&:hover
+		text-decoration none
+
+.type--mark
+	color $mark
+
+.text
+	p
+		+below(640px)
+			margin-bottom: 20px
+		line-height: 1.6
+		margin-bottom: 30px
+	ul
+		+below(640px)
+			margin-bottom: 20px
+		margin-bottom: 30px
+		li
+			line-height: 1.6
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+	img
+		margin: 30px 0

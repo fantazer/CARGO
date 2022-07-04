@@ -1,0 +1,154 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		//content her
+		.header
+			.main-cont
+				.header-wrap
+					a(href="/").header-logo
+						img(src="img/logo.svg", alt="")
+					a(href="tel:89261632919").header-phone 8 926 163 29 19
+
+		.banner(style="background-image:url('img/slider-3.jpg')")
+			.main-cont
+				.banner-info
+					.banner-title Аутсорсинг и лизинг персонала
+					.banner-text   Мы специализируемся на предоставлении услуг лизинга персонала, аутстаффинга, организации бригад работников для складской логистики
+		.section
+			.main-cont
+				.about
+					.about__img
+						img(src="img/man.jpg", alt="")
+					.about__info
+						.about__title О нашей компании
+						.about__text
+							p Наша Миссия: создать и возглавить новый рынок труда в России и за ее пределами. Мы предлагаем людям свободу заработка без привязки к жёсткому графику и месту проживания. С нашей помощью каждый сможет обеспечить себе доход, выполняя разовые задачи или временную работу в любой точке мира.
+
+							p Высокая технологичность и автоматизация – главные драйверы развития компании. Они помогают предоставлять качественно лучший сервис и завоевывать лояльность клиентов.
+							p Еще совсем недавно о таких видах деятельности, как аутсорсинг и аутстаффинг мало кто слышал и их востребованность на рынке труда была минимальной. Сегодня эти услуги плотно вошли в работу каждого бизнеса.
+		.section.section--gray.section-advant
+			img(src="img/worker-man.png", alt="").advant-bg
+			.main-cont
+				.section-title Почему с нами выгодно
+				.advant
+					.advant__el
+						.advant__el-icon
+							+icon("group","icon")
+						.advant__el-text Срочное увеличение количества сотрудников
+					.advant__el
+						.advant__el-icon
+							+icon("engineer","icon")
+						.advant__el-text Моментальная замена в случае необходимости
+					.advant__el
+						.advant__el-icon
+							+icon("work","icon")
+						.advant__el-text Материальная ответственность
+					.advant__el
+						.advant__el-icon
+							+icon("team","icon")
+						.advant__el-text Юридическая ответственность
+					.advant__el
+						.advant__el-icon
+							+icon("management","icon")
+						.advant__el-text Сложные и удаленные объекты работы
+					.advant__el
+						.advant__el-icon
+							+icon("worker","icon")
+						.advant__el-text Улучшение общего качества труда
+					.advant__el
+						.advant__el-icon
+							+icon("tools","icon")
+						.advant__el-text Стабильность работы
+					.advant__el
+						.advant__el-icon
+							+icon("management","icon")
+						.advant__el-text Уверенность в результате
+
+		.section.section-bg(style="background-image:url('img/team-bg.jpg')")
+			.filter
+			.main-cont
+				.section-title Наши услуги
+				.service
+					.service__el
+						.service__el-img(style="background-image:url('img/gruzchik.jpg')")
+						.service__el-info
+							.service__el-name Грузчики
+							.service__el-cost от 180 р/час
+					.service__el
+						.service__el-img(style="background-image:url('img/komplektovshikn.jpg')")
+						.service__el-info
+							.service__el-name Комплектовщики
+							.service__el-cost от 200 р/час
+					.service__el
+						.service__el-img(style="background-image:url('img/rabochi.jpg')")
+						.service__el-info
+							.service__el-name Рабочие
+							.service__el-cost от 190 р/час
+					.service__el
+						.service__el-img(style="background-image:url('img/dvornik.jpg')")
+						.service__el-info
+							.service__el-name Уборщики
+							.service__el-cost от 180 р/час
+					.service__el
+						.service__el-img(style="background-image:url('img/skanirovchik.jpg')")
+						.service__el-info
+							.service__el-name Сканировщики
+							.service__el-cost от 190 р/час
+					.service__el
+						.service__el-img(style="background-image:url('img/fasovchik.jpg')")
+						.service__el-info
+							.service__el-name Фасовщики
+							.service__el-cost от 190 р/час
+					.service__el
+						.service__el-img(style="background-image:url('img/upakovshik.jpg')")
+						.service__el-info
+							.service__el-name Упаковщики
+							.service__el-cost от 190 р/час
+					.service__el
+						.service__el-img(style="background-image:url('img/stikerovshik.jpg')")
+						.service__el-info
+							.service__el-name Стикеровщики
+							.service__el-cost от 190 р/час
+
+		.section
+			.main-cont
+				.section-title Наши заказчики
+				.parnters
+					- for (var i=1;i<15;i++)
+						.parnters__el
+							img(src="img/customer/"+i+"-customer.jpg", alt="")
+
+		.section.section--gray
+			.main-cont
+				.section-title Оставьте свою заявку
+				.order
+					.order-img(style="background-image:url('img/join-img.jpg')")
+					.order-form
+						img(src="img/logo.svg", alt="").order-logo
+						.forms
+							form.validate-form( action="javascript:void(null);")
+								.input-row
+									.input-row__title Введите Ваше имя и фамилию
+									input(type="text" name="name" placeholder="Ваше имя").input
+								.input-row
+									.input-row__title Введите Ваш телефон
+									input(type="text" name="phone" placeholder="Ваша телефон").input
+								.input-row
+									.input-row__title Введите Ваш вопрос
+									textarea(name="info", cols="30", rows="5" placeholder="Сообщение").input
+
+
+								input(type="submit" value="Отправить").modal-send.btn--md.btn--mark
+	+footer()
+	.modal-layer
+		.modal-filter
+		.modal-wrap
+			//success message
+			.modal(data-modal="truemessage")
+				.modal-content.modal-content--true
+					+icon("interface","icon")
+					.modal-text-true Ваше сообщение отправленно
+include ./block_html/_script.pug
