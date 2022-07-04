@@ -10,18 +10,18 @@ include block_html/_include.pug
 				.header-wrap
 					a(href="/").header-logo
 						img(src="img/logo.svg", alt="")
-					a(href="tel:89261632919").header-phone 8 926 163 29 19
+					a(href="tel:8 919 723-70-14").header-phone 8 (919) 723-70-14
 
-		.banner(style="background-image:url('img/slider-3.jpg')")
+		.banner(style="background-image:url('img/slider-4.jpg')")
 			.main-cont
 				.banner-info
-					.banner-title Аутсорсинг и лизинг персонала
-					.banner-text   Мы специализируемся на предоставлении услуг лизинга персонала, аутстаффинга, организации бригад работников для складской логистики
+					.banner-title Лизинг и Аутсорсинг персонала
+					.banner-text   Наша компания готова предоставить вам услуги по лизингу персонала, аутсатффу. Мы легко организуем любые по размеру бригады работников для складских работ.
 		.section
 			.main-cont
 				.about
 					.about__img
-						img(src="img/man.jpg", alt="")
+						img(src="img/group.jpg", alt="")
 					.about__info
 						.about__title О нашей компании
 						.about__text
@@ -32,7 +32,7 @@ include block_html/_include.pug
 		.section.section--gray.section-advant
 			img(src="img/worker-man.png", alt="").advant-bg
 			.main-cont
-				.section-title Почему с нами выгодно
+				.section-title Чем мы лучше других компаний ?
 				.advant
 					.advant__el
 						.advant__el-icon
@@ -66,12 +66,20 @@ include block_html/_include.pug
 						.advant__el-icon
 							+icon("management","icon")
 						.advant__el-text Уверенность в результате
-
+					.advant__el
+						.advant__el-icon
+							+icon("price","icon")
+						.advant__el-text Всегда выгодная цена
 		.section.section-bg(style="background-image:url('img/team-bg.jpg')")
 			.filter
 			.main-cont
 				.section-title Наши услуги
 				.service
+					.service__el
+						.service__el-img(style="background-image:url('img/rabochi.jpg')")
+						.service__el-info
+							.service__el-name Рабочие
+							.service__el-cost от 190 р/час
 					.service__el
 						.service__el-img(style="background-image:url('img/gruzchik.jpg')")
 						.service__el-info
@@ -83,24 +91,9 @@ include block_html/_include.pug
 							.service__el-name Комплектовщики
 							.service__el-cost от 200 р/час
 					.service__el
-						.service__el-img(style="background-image:url('img/rabochi.jpg')")
-						.service__el-info
-							.service__el-name Рабочие
-							.service__el-cost от 190 р/час
-					.service__el
-						.service__el-img(style="background-image:url('img/dvornik.jpg')")
-						.service__el-info
-							.service__el-name Уборщики
-							.service__el-cost от 180 р/час
-					.service__el
 						.service__el-img(style="background-image:url('img/skanirovchik.jpg')")
 						.service__el-info
 							.service__el-name Сканировщики
-							.service__el-cost от 190 р/час
-					.service__el
-						.service__el-img(style="background-image:url('img/fasovchik.jpg')")
-						.service__el-info
-							.service__el-name Фасовщики
 							.service__el-cost от 190 р/час
 					.service__el
 						.service__el-img(style="background-image:url('img/upakovshik.jpg')")
@@ -108,9 +101,19 @@ include block_html/_include.pug
 							.service__el-name Упаковщики
 							.service__el-cost от 190 р/час
 					.service__el
+						.service__el-img(style="background-image:url('img/dvornik.jpg')")
+						.service__el-info
+							.service__el-name Уборщики
+							.service__el-cost от 180 р/час
+					.service__el
 						.service__el-img(style="background-image:url('img/stikerovshik.jpg')")
 						.service__el-info
 							.service__el-name Стикеровщики
+							.service__el-cost от 190 р/час
+					.service__el
+						.service__el-img(style="background-image:url('img/fasovchik.jpg')")
+						.service__el-info
+							.service__el-name Фасовщики
 							.service__el-cost от 190 р/час
 
 		.section
